@@ -1,0 +1,45 @@
+{
+  "name": "@z-cloud/react-keep-alive",
+  "version": "1.0.0",
+  "description": "react keep alive for react router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyt-cloud/react-keep-alive.git"
+  },
+  "keywords": [
+    "react-keep-alive",
+    "keep-alive",
+    "react-router",
+    "cache"
+  ],
+  "author": "zyt-cloud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyt-cloud/react-keep-alive/issues"
+  },
+  "homepage": "https://github.com/zyt-cloud/react-keep-alive#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.19.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
