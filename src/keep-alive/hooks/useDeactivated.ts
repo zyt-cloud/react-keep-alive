@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { useAliveElementContext } from '../context/AliveElement'
 
 export function useDeactivated(callback: () => void) {
   const { registerDeactivated } = useAliveElementContext()
 
-  useEffect(() => {
-    registerDeactivated(callback)
+  useLayoutEffect(() => {
+    const destory = registerDeactivated(callback)
+    return () => destory()
   }, [])
 }

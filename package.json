@@ -2,15 +2,15 @@
   "name": "@z-cloud/react-keep-alive",
   "version": "1.0.0",
   "description": "react keep alive for react router",
-  "module": "./dist/index.esm.js",
   "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs.js"
     }
   },
   "files": [
@@ -20,6 +20,11 @@
   ],
   "scripts": {
     "build": "tsup",
+    "release-major": "standard-version --release-as major",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch",
+    "release-first": "standard-version --first-release",
+    "prepublishOnly": "npm run lint:fix && npm run build",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
@@ -51,6 +56,7 @@
     "prettier": "^3.4.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "standard-version": "^9.5.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.19.1"

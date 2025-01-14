@@ -8,10 +8,16 @@ export function useAliveElementState(active: boolean) {
 
   const registerActivated = (callback: CallbackType) => {
     activatedRef.current.push(callback)
+    return () => {
+      activatedRef.current = activatedRef.current.filter((cb) => cb !== callback)
+    }
   }
 
   const registerDeactivated = (callback: CallbackType) => {
     deactivatedRef.current.push(callback)
+    return () => {
+      deactivatedRef.current = activatedRef.current.filter((cb) => cb !== callback)
+    }
   }
 
   useEffect(() => {
