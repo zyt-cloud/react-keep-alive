@@ -6,7 +6,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+  { files: ['src/**/*.{js,ts,jsx,tsx}'] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -20,7 +20,7 @@ export default [
       '@typescript-eslint/no-unused-expressions': 'off',
       'prefer-const': 'error',
       'react/display-name': 'off',
-      'plugin:react/jsx-runtime': 'extends',
+      'react/react-in-jsx-scope': 'off',
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: 'block-like', next: '*' },
