@@ -50,7 +50,7 @@ function Com() {
   const { remount, clear, getActivatedIds, getDeactivatedIds } = useActions()
 
   // remount 重新挂载指定组件，不传参数则挂载所有已激活组件
-  // clear 清楚指定换成，不传参数则全部清除
+  // clear 清楚指定缓存，不传参数则全部清除
   // getActivatedIds 获取已激活的组件ids
   // getDeactivatedIds 获取已失活的组件ids
   return 'Com'
