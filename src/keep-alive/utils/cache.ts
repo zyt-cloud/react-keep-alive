@@ -37,6 +37,7 @@ export class CacheNode {
   }
 
   clearDomRef(element: CacheElementType) {
+    element.portalDomNode.remove()
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     element.portalDomNode = null
