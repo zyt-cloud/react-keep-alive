@@ -13,7 +13,8 @@ export function Wrapper(props: ActivityProps) {
 
     const promise = promiseRef.current
     if (Reflect.has(React, 'use')) {
-      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       React.use(promise)
     } else {
       throw promise
