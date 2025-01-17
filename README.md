@@ -6,7 +6,7 @@
 pnpm add @z-cloud/react-keep-alive
 ```
 
-## with `react-router`
+## with `react-router v6+`
 
 ```ts
 import { Link, type UIMatch, useLocation, useMatches, useOutlet } from 'react-router'
@@ -49,7 +49,7 @@ import { useActions } from '@z-cloud/react-keep-alive'
 function Com() {
   const { remount, clear, getActivatedIds, getDeactivatedIds } = useActions()
 
-  // remount 重新挂载指定组件，不传参数则挂载所有已激活组件
+  // remount 重新挂载指定组件，不传参数则重新挂载所有已激活组件
   // clear 清除指定缓存，不传参数则全部清除
   // getActivatedIds 获取已激活的组件ids
   // getDeactivatedIds 获取已失活的组件ids
