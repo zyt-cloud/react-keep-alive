@@ -25,5 +25,5 @@
       "@z-cloud/react-keep-alive": ["../src"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "../src/**/*"]
 }

@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useActivated, useDeactivated, useActions } from '@z-cloud/react-keep-alive'
+import { useLoaderData } from 'react-router'
 
 export default function About() {
   const [count, setCount] = useState(0)
   const { remount } = useActions()
+  console.log('about loaderData', useLoaderData())
 
   useActivated(() => console.log('About activated'))
   useDeactivated(() => console.log('About deactivated'))

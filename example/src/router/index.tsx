@@ -13,9 +13,13 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'about',
-        handle: { keepAlive: true },
+        path: 'about/:id',
+        handle: { keepAlive: true, keepId: 'about' },
         element: <About />,
+        loader: ({ params }) => {
+          console.log('loader')
+          return params
+        },
       },
       {
         path: 'dashboard',
