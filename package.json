@@ -1,12 +1,14 @@
 {
   "name": "@z-cloud/react-keep-alive",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react keep alive for react router",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
+  "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "exports": {
     "./package.json": "./package.json",
