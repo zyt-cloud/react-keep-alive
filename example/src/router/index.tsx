@@ -14,12 +14,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'about/:id',
-        handle: { keepAlive: true, keepId: 'about' },
+        handle: { keepAlive: true },
         element: <About />,
-        loader: ({ params }) => {
-          console.log('loader')
+        /* loader: ({ params }) => {
           return params
-        },
+        }, */
       },
       {
         path: 'dashboard',
